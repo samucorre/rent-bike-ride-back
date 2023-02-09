@@ -1,0 +1,40 @@
+server:
+  port: 9999
+  
+spring:
+  datasource:
+#    url: jdbc:postgresql://ec2-52-208-164-5.eu-west-1.compute.amazonaws.com:5432/d8s1uh2o1deln8
+#    driver-class-name: org.postgresql.Driver
+#    username: iczminpqewqygr
+#    password: 644d9b0aaf3bb285a3bbfb0bd7bcb32647d459e53305cc39a271fd2ea410ffc8
+#    url: jdbc:mysql://PMYSQL115.dns-servicio.com:3306/6989818_bd_pruebas
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    username: test
+#    password: h5X6eq3?4 
+    url: jdbc:postgresql://PPSQL100.dns-servicio.com:5432/6989818_pruebas_postgres
+    driver-class-name: org.postgresql.Driver
+    username: samu
+    password: samu1234 
+  jpa:
+    hibernate.ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQL9Dialect
+#        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+# oauth2 configuration  
+security:
+  oauth2:
+    client:
+      client-id: demo
+      client-secret: 8Fjkk59bXKws8bmMNFZB
+      authorized-grant-types: password,authorization_code,refresh_code,implicit
+      scope: openid
+      
+demo:
+  oauth:
+    enabled: true
+    accessTokenValiditySeconds: 86400
+    refreshTokenValiditySeconds: 86400

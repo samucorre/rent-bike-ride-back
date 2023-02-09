@@ -1,0 +1,7 @@
+package com.example.demo.entity.error;
+
+public enum ModelError {
+	ID_REQUIRED, MODEL_REQUIRED,  MODEL_ALREADY_EXISTS, MODEL_CONSTRAINT_VIOLATION,MODEL_DATA_INTEGRITY_VIOLATION;
+
+
+}

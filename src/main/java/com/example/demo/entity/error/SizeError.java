@@ -1,0 +1,7 @@
+package com.example.demo.entity.error;
+
+public enum SizeError {
+	ID_REQUIRED, SIZE_REQUIRED,  SIZE_ALREADY_EXISTS, SIZE_CONSTRAINT_VIOLATION,SIZE_DATA_INTEGRITY_VIOLATION;
+	}
+
+
