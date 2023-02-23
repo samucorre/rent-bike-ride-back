@@ -1,7 +1,10 @@
 ## rent-bike-ride-back
 
-Backend en desarrollo para rent-bike-ride 
+## rent-bike-ride-backend:
 
+Servidor Spring boot sobre Java 17.
+
+IDE recomendado: Eclipse, con plugin Spring tools instalado para poder arrancar el servidor desde el "Boot dashboard".
 
 ![image](https://user-images.githubusercontent.com/124720302/220874265-3cf76dff-9950-4c8c-ad4d-408ab236327d.png)
 
