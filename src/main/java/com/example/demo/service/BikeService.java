@@ -14,43 +14,43 @@ import com.example.demo.rest.response.RESTResponse;
 		/**ADAPTADO A BICICLETAS
 		 * Obtiene un de BDD con el id indicado.
 		 * 
-		 * @param id el id del usuario de la BDD.
-		 * @return el usuario cuyo id sea el pasado por parámetros.
+		 * @param id el id de la bike de la BDD.
+		 * @return la bike cuyo id sea el pasado por parámetros.
 		 */
 		RESTResponse<BikeResponse> getBike(Integer id);
 
 		/**
-		 * Devuelve los usuarios que alguno de sus campos contenga la 'query'
+		 * Devuelve las bikes que alguno de sus campos contenga la 'query'
 		 * independientemente de las mayúsculas.
 		 * 
 		 * @param pageFilter filtro de la tabla
-		 * @return usuarios que alguno de sus campos contenga la 'query'
+		 * @return bikes que alguno de sus campos contenga la 'query'
 		 *         independientemente de las mayúsculas.
 		 * @since 0.0.5
 		 */
 		DataSourceRESTResponse<List<BikeResponse>> getBikes(AnyPageFilter pageFilter);
 
 		/**
-		 * Crea un nuevo usuario en la BDD.
+		 * Crea una nueva bike en la BDD.
 		 * 
-		 * @return el id del usuario creado.
-		 * @since 0.0.5
+		 * @return el id de l bike creada.
+		 * 
 		 */
 		RESTResponse<Integer> createBike(CreateBikeRequest createBikeRequest);
 
 		/**
-		 * Modifica un usuario en la BDD.
+		 * Modifica una bike en la BDD.
 		 * 
-		 * @return el id del usuario modificado.
-		 * @since 0.0.5
+		 * @return el id de la bike modificada.
+		 * 
 		 */
 		RESTResponse<Integer> editBike(EditBikeRequest editBikeRequest);
 
 		/**
-		 * Elimina un usuario de la BDD.
+		 * Elimina una bike de la BDD.
 		 * 
-		 * @return el id del usuario eliminado.
-		 * @since 0.0.5
+		 * @return el id de la bike eliminada.
+		 * 
 		 */
 		RESTResponse<Integer> deleteBike(Integer id);
 	}
