@@ -31,7 +31,11 @@ import com.example.demo.entity.Size;
 import com.example.demo.entity.error.SizeError;
 import com.example.demo.rest.model.CreateSizeRequest;
 import com.example.demo.rest.model.EditSizeRequest;
-
+//
+import com.example.demo.entity.RentPrice;
+import com.example.demo.entity.error.RentPriceError;
+import com.example.demo.rest.model.CreateRentPriceRequest;
+import com.example.demo.rest.model.EditRentPriceRequest;
 
 
 public abstract class AbstractDemoService {
@@ -178,5 +182,28 @@ protected void checkInputParams(EditSizeRequest editSizeRequest) {
 
 	public Size fromCreateSizeRequest(CreateSizeRequest sizeRequest) {
 		return new Size(sizeRequest.getSize());
+	}
+	
+	//
+	protected void checkInputParams(CreateRentPriceRequest createRentPriceRequest) {
+		if (StringUtils.isBlank(createRentPriceRequest.getRentPrice())) {
+			throw new DemoException(RentPriceError.RENTPRICE_REQUIRED.toString());
+
+	}
+}
+protected void checkInputParams(EditRentPriceRequest editRentPriceRequest) {
+		if (editRentPriceRequest.getId() == null) {
+			throw new DemoException(RentPriceError.ID_REQUIRED.toString());
+		}
+		checkInputParams((CreateRentPriceRequest) editRentPriceRequest);
+	}
+
+	public RentPrice fromEditRentPriceRequest(EditRentPriceRequest rentPriceRequest) {
+		return new RentPrice(rentPriceRequest.getId(), rentPriceRequest.getRentPrice());
+
+	}
+
+	public RentPrice fromCreateRentPriceRequest(CreateRentPriceRequest rentPriceRequest) {
+		return new RentPrice(rentPriceRequest.getRentPrice());
 	}
 }
