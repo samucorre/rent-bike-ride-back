@@ -6,6 +6,7 @@ public class RentPriceResponse {
 	private Integer id;
 	private float rentPrice;
 
+	
 	public RentPriceResponse(Integer id, float rentPrice) {
 		this.id = id;
 		this.rentPrice = rentPrice;

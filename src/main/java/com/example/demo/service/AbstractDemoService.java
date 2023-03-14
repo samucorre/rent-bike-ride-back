@@ -186,7 +186,7 @@ protected void checkInputParams(EditSizeRequest editSizeRequest) {
 	
 	//
 	protected void checkInputParams(CreateRentPriceRequest createRentPriceRequest) {
-		if (StringUtils.isBlank(createRentPriceRequest.getRentPrice())) {
+		if (createRentPriceRequest.getRentPrice() == 0.0) {
 			throw new DemoException(RentPriceError.RENTPRICE_REQUIRED.toString());
 
 	}
